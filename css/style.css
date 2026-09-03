@@ -90,7 +90,7 @@ body {
   color: white;
   text-align: center;
   padding: 2rem;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 /* ===== HERO SECTION ===== */
@@ -301,4 +301,177 @@ body {
 .btn-link:hover {
     color: #1d4ed8;
     text-decoration: underline;
+}
+
+/* ===== VITRINA DIGITAL ===== */
+
+.vitrina-content {
+    padding: 120px 20px 80px;  /* Agregué padding lateral de 20px */
+    min-height: 70vh;
+}
+
+.vitrina-title {
+    font-size: 2.5rem;
+    color: #2563eb;
+    margin-bottom: 3rem;
+    text-align: center;  /* Centré el título */
+}
+
+.vitrina-grid {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 4rem;  /* Aumenté el espacio entre columnas */
+    align-items: start;
+    max-width: 1200px;  /* Limité el ancho máximo */
+    margin: 0 auto;  /* Centré el grid */
+}
+
+/* Columna izquierda - Información */
+.vitrina-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;  /* Más espacio entre secciones */
+}
+
+.info-section {
+    max-width: 90%;  /* Evita que el texto llegue al borde */
+}
+
+.info-section h2 {
+    font-size: 1.8rem;
+    color: #1e293b;
+    margin-bottom: 1rem;
+}
+
+.info-section p {
+    font-size: 1.1rem;
+    color: #475569;
+    line-height: 1.6;
+}
+
+.cta-box {
+    background: #f1f5f9;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 1rem;
+    text-align: center;  /* Centré el contenido */
+}
+
+.cta-box p {
+    font-size: 1.1rem;
+    color: #1e293b;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* Columna derecha - Caja de plataformas */
+.plataformas-box {
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;  /* Más padding vertical */
+    position: relative;
+    max-width: 100%;  /* Asegura que no se salga */
+}
+
+.plataformas-title {
+    font-size: 1.8rem;
+    color: #2563eb;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.plataformas-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.plataformas-list li {
+    padding: 1rem 0;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: center;  /* Centré los items */
+}
+
+.plataformas-list li:last-child {
+    border-bottom: none;
+}
+
+.plataformas-list a {
+    color: #1e293b;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.plataformas-list a:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+.plataformas-note {
+    text-align: center;
+    color: #64748b;
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+/* Botón de demostración (arriba a la derecha) */
+.demo-button-container {
+    text-align: right;
+    margin-top: 3rem;
+    padding-right: 20px;  /* Agregué padding derecho */
+}
+
+.btn-demo {
+    background: #2563eb;
+    color: white;
+    padding: 12px 32px;  /* Más padding horizontal */
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-demo:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .vitrina-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .plataformas-box {
+        order: -1;
+        max-width: 500px;
+        margin: 0 auto;  /* Centré la caja en móvil */
+    }
+    
+    .info-section {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .vitrina-content {
+        padding: 100px 15px 60px;  /* Más padding lateral en móvil */
+    }
+    
+    .vitrina-title {
+        font-size: 2rem;
+    }
+    
+    .info-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .info-section p {
+        font-size: 1rem;
+    }
 }
